@@ -1,0 +1,130 @@
+﻿<Window x:Class="Sudoku_Solver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sudoku_Solver"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="609" Width="588">
+    <Grid Background="DimGray" Margin="0,0,0,-6">
+        <!--Top Row Grid -->
+        <Border Name="TopLeft" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="113,50,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="TopMid" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="232,50,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="TopRight" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="120" Margin="351,50,0,0"/>
+
+        <!--Mid Row Grid -->
+        <Border Name="MidLeft" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="113,169,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="Center" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="232,169,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="MidRight" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="120" Margin="351,169,0,0"/>
+
+        <!--Bottom Row Grid -->
+        <Border Name="BotLeft" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="113,288,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="BotMid" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" Margin="232,288,0,0" VerticalAlignment="Top" Width="120"/>
+        <Border Name="BotRight" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="120" Margin="351,288,0,0"/>
+
+        <!-- Using tags to indicate the associated array location   -->
+        <!-- Row 0 Cells -->
+        <Button Name="_00" Tag="00" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,51,0,0"/>
+        <Button Name="_01" Tag="01" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,51,0,0"/>
+        <Button Name="_02" Tag="02" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,51,0,0"/>
+        <Button Name="_03" Tag="03" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,51,0,0"/>
+        <Button Name="_04" Tag="04" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,51,0,0"/>
+        <Button Name="_05" Tag="05" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,51,0,0"/>
+        <Button Name="_06" Tag="06" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,51,0,0"/>
+        <Button Name="_07" Tag="07" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,51,0,0"/>
+        <Button Name="_08" Tag="08" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,51,0,0"/>
+
+        <!-- Row 1 Cells -->
+        <Button Name="_10" Tag="09" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,90,0,0"/>
+        <Button Name="_11" Tag="10" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,90,0,0"/>
+        <Button Name="_12" Tag="11" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,90,0,0"/>
+        <Button Name="_13" Tag="12" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,90,0,0"/>
+        <Button Name="_14" Tag="13" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,90,0,0"/>
+        <Button Name="_15" Tag="14" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,90,0,0"/>
+        <Button Name="_16" Tag="15" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,90,0,0"/>
+        <Button Name="_17" Tag="16" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,90,0,0"/>
+        <Button Name="_18" Tag="17" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,90,0,0"/>
+
+        <!-- Row 2 Cells -->
+        <Button Name="_20" Tag="18" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,129,0,0"/>
+        <Button Name="_21" Tag="19" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,129,0,0"/>
+        <Button Name="_22" Tag="20" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,129,0,0"/>
+        <Button Name="_23" Tag="21" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,129,0,0"/>
+        <Button Name="_24" Tag="22" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,129,0,0"/>
+        <Button Name="_25" Tag="23" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,129,0,0"/>
+        <Button Name="_26" Tag="24" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,129,0,0"/>
+        <Button Name="_27" Tag="25" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,129,0,0"/>
+        <Button Name="_28" Tag="26" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,129,0,0"/>
+
+        <!-- Row 3 Cells -->
+        <Button Name="_30" Tag="27" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,170,0,0"/>
+        <Button Name="_31" Tag="28" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,170,0,0"/>
+        <Button Name="_32" Tag="29" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,170,0,0"/>
+        <Button Name="_33" Tag="30" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,170,0,0"/>
+        <Button Name="_34" Tag="31" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,170,0,0"/>
+        <Button Name="_35" Tag="32" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,170,0,0"/>
+        <Button Name="_36" Tag="33" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,170,0,0"/>
+        <Button Name="_37" Tag="34" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,170,0,0"/>
+        <Button Name="_38" Tag="35" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,170,0,0"/>
+
+        <!-- Row 4 Cells -->
+        <Button Name="_40" Tag="36" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,209,0,0"/>
+        <Button Name="_41" Tag="37" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,209,0,0"/>
+        <Button Name="_42" Tag="38" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,209,0,0"/>
+        <Button Name="_43" Tag="39" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,209,0,0"/>
+        <Button Name="_44" Tag="40" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,209,0,0"/>
+        <Button Name="_45" Tag="41" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,209,0,0"/>
+        <Button Name="_46" Tag="42" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,209,0,0"/>
+        <Button Name="_47" Tag="43" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,209,0,0"/>
+        <Button Name="_48" Tag="44" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,209,0,0"/>
+
+        <!-- Row 5 Cells -->
+        <Button Name="_50" Tag="45" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,248,0,0"/>
+        <Button Name="_51" Tag="46" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,248,0,0"/>
+        <Button Name="_52" Tag="47" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,248,0,0"/>
+        <Button Name="_53" Tag="48" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,248,0,0"/>
+        <Button Name="_54" Tag="49" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,248,0,0"/>
+        <Button Name="_55" Tag="50" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,248,0,0"/>
+        <Button Name="_56" Tag="51" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,248,0,0"/>
+        <Button Name="_57" Tag="52" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,248,0,0"/>
+        <Button Name="_58" Tag="53" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,248,0,0"/>
+
+        <!-- Row 6 Cells -->
+        <Button Name="_60" Tag="54" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,290,0,0"/>
+        <Button Name="_61" Tag="55" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,290,0,0"/>
+        <Button Name="_62" Tag="56" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,290,0,0"/>
+        <Button Name="_63" Tag="57" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,290,0,0"/>
+        <Button Name="_64" Tag="58" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,290,0,0"/>
+        <Button Name="_65" Tag="59" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,290,0,0"/>
+        <Button Name="_66" Tag="60" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,290,0,0"/>
+        <Button Name="_67" Tag="61" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,290,0,0"/>
+        <Button Name="_68" Tag="62" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,290,0,0"/>
+
+        <!-- Row 7 Cells -->
+        <Button Name="_70" Tag="63" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,328,0,0"/>
+        <Button Name="_71" Tag="64" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,328,0,0"/>
+        <Button Name="_72" Tag="65" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,328,0,0"/>
+        <Button Name="_73" Tag="66" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,328,0,0"/>
+        <Button Name="_74" Tag="67" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,328,0,0"/>
+        <Button Name="_75" Tag="68" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,328,0,0"/>
+        <Button Name="_76" Tag="69" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,328,0,0"/>
+        <Button Name="_77" Tag="70" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,328,0,0"/>
+        <Button Name="_78" Tag="71" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,328,0,0"/>
+
+        <!-- Row 8 Cells -->
+        <Button Name="_80" Tag="72" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="114,367,0,0"/>
+        <Button Name="_81" Tag="73" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="153,367,0,0"/>
+        <Button Name="_82" Tag="74" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="192,367,0,0"/>
+        <Button Name="_83" Tag="75" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="233,367,0,0"/>
+        <Button Name="_84" Tag="76" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="272,367,0,0"/>
+        <Button Name="_85" Tag="77" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="311,367,0,0"/>
+        <Button Name="_86" Tag="78" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="353,367,0,0"/>
+        <Button Name="_87" Tag="79" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="391,367,0,0"/>
+        <Button Name="_88" Tag="80" Background="LightGray" Content="" FontSize="20" Click="OnClick" KeyDown="Keydown1" ClickMode="Press" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.517,1.156" Margin="430,367,0,0"/>
+        
+        <!--  The clear and solve buttons-->
+        <Button Content="Clear" Click="Clear_Board" ClickMode="Press" HorizontalAlignment="Left" Margin="342,432,0,0" VerticalAlignment="Top" Height="78" Width="130"/>
+        <Button Content="Solve" Click="Solve" ClickMode="Press" HorizontalAlignment="Left" Margin="114,432,0,0" VerticalAlignment="Top" Height="78" Width="130" RenderTransformOrigin="0.472,-0.755"/>
+
+    </Grid>
+</Window>
