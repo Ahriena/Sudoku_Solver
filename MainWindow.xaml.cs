@@ -16,9 +16,7 @@ using System.Windows.Threading;
 
 namespace Sudoku_Solver
 {
-    /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow
     {
         public int [] grid = new int[81];
